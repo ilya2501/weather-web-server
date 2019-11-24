@@ -5,7 +5,7 @@ onsubmit = (e) => {
     const locationMessage = document.querySelector(".location")
     
     forecastMessage.textContent = 'loading';
-    fetch(`${location.origin}/weather?address=${e.target.children[0].value}`)
+    fetch(`/weather?address=${e.target.children[0].value}`)
         .then((resp) => {
             resp.json()
                 .then((data) => {
